@@ -1,6 +1,11 @@
 /*
 Exercise 1
 
+Write a program that swaps the 1st and 2nd bits of a number. 
+For example, the number 13 in binary is 0b01101. As a result, 
+you need to get 0b01011 or the number 11 in decimal. The bits 
+are counted from right to left (from the lowest bits to the highest) 
+starting from zero.
 
 Упражнение 1
 
