@@ -21,4 +21,4 @@ int main(void)
     return 0;
 }
 
-//gcc exercise2.c -o exercise2 && ./exercise2
+//gcc exercise1.c -o exercise1 && ./exercise1
