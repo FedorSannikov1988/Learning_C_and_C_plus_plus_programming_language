@@ -35,7 +35,7 @@ int main(void)
 
     //вывод адреса памяти
     //правильно:
-    printf("Pointer pVar1 = %p \n", (void*) pVar1);
+    printf("Pointer pVar1 = %p \n", pVar1);
     //не правильно (не по стандарту):
     printf("Pointer pVar1 = %p \n", (void*) pVar1);
 
