@@ -3,7 +3,6 @@ Exercise 2:
 
 
 Упражнение 2:
-
 */
 
 #include <stdio.h>
