@@ -10,6 +10,7 @@ the result to the console.
 выводит на консоль результат.
 */
 #include <stdio.h>
+#include <errno.h>
 #include <string.h>
 #include <stdlib.h>
 #include "exercise1.h"
@@ -18,8 +19,34 @@ the result to the console.
 int main(void) {
 
     char * name_file = input_data();
-    printf("Enter name: %s\n", name_file);
-    free(name_file);
+    
+
+    if(name_file == NULL) {
+
+        //printf("File name is not entered");
+        //perror("File name is not entered");
+        fprintf(stderr, "File name is not entered: %s\n", strerror(errno));
+    
+    } else {
+
+        printf("Enter name: %s\n", name_file);
+
+        FILE * fp = fopen(name_file, "w+");
+
+        if(fp == NULL) {
+
+            //perror("File has not been created");
+            //printf("File has not been created: %s\n", name_file);
+            fprintf(stderr, "File has not been created: %s. %s\n", name_file, strerror(errno));
+            
+        } else {
+
+            fclose(fp);
+
+        }
+
+        free(name_file);
+    }
 
     return 0;
 }
